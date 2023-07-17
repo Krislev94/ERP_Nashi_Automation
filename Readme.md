@@ -1,10 +1,3 @@
-### Template Automation Framework For Project Implementation
-
-- Team Lead and members clone that project
-- Then team will create their own project by using that template which has all folder structure and dependencies
-  are needed
-</br></br>
-
 ### Application Under Test
 https://qa.twiliaerp.com/web/login
 
@@ -35,35 +28,33 @@ https://jira.cydeo.com/secure/RapidBoard.jspa?rapidView=1454&projectKey=B29G32&v
 | `Inventory Manager` |imm10 -- 160 @info.com|inventorymanager|
 | `Expenses Manager`  |expensesmanager10 -- 110@info.com|expensesmanager|
 
+### Template Automation Framework For Project Implementation
+
+- Team Lead and members clone that project
+- Then team will create their own project by using that template which has all folder structure and dependencies
+  are needed
+
 ### While project creation:
 
-     1. Team will use own project name for
+>1. Team will use own project name for
     package name
 
-![](template-files/package_name.png)
+>2. Copy runners package and paste under project package
 
-    2. Copy runners package and paste under project package     
+>3. Change CukesRunner glue key
 
+>4. Change FailedTestRunner glue
 
-    3. Change CukesRunner glue key
+>5. Copy features directory paste in your resources directory
 
-![](template-files/cukes_glue.png)
+>6. Copy step_definitions packege and paste under your project package
 
-    4. Change FailedTestRunner glue
+>7. Copy pages package and paste under your project package
 
-![](template-files/failed_glue.png)
+>8. Copy utilities package and paste under your project package
 
-     5. Copy features directory paste in your resources directory
- 
-     6. Copy step_definitions packege and paste under your project package
+### *** IMPORTANT ***
 
-     7. Copy pages package and paste under your project package
+>- Fix your each class import statements
 
-     8. Copy utilities package and paste under your project package
-
-# *** IMPORTANT ***
-
-- Fix your each class import statements
-
-![](template-files/fix_import.png)
 

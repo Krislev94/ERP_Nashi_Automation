@@ -4,36 +4,36 @@ import com.twiliaerp.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.Properties;
-
 public class US07_MainPage extends US07_PageBase {
-    @FindBy (css = "#login")
+
+
+    @FindBy(css = "#login")
     public WebElement emailInputBox;
 
-    @FindBy (css = "#password")
+    @FindBy(css = "#password")
     public WebElement passwordInputBox;
 
-    @FindBy (css = "[type='submit']")
+    @FindBy(css = "[type='submit']")
     public WebElement loginButton;
 
-    public void loginAsPosManager(){
-        fillInInputBox(emailInputBox, ConfigurationReader.getProperty("pos.manager.email"));
-        fillInInputBox(passwordInputBox, ConfigurationReader.getProperty("pos.manager.password"));
+    private String posManagerEmail = "posmanager10@info.com";
+    private String posManagerPassword = "posmanager";
+
+    private String salesManagerEmail = "salesmanager10@info.com";
+    private String salesManagerPassword = "salesmanager";
+
+
+    public void loginAsPosManager() {
+        fillInInputBox(emailInputBox, posManagerEmail);
+        fillInInputBox(passwordInputBox, posManagerPassword);
         clickButton(loginButton);
     }
 
-    public void loginAsSalesManager(){
-        fillInInputBox(emailInputBox, ConfigurationReader.getProperty("sales.manager.email"));
-        fillInInputBox(passwordInputBox, ConfigurationReader.getProperty("sales.manager.password"));
+    public void loginAsSalesManager() {
+        fillInInputBox(emailInputBox, salesManagerEmail);
+        fillInInputBox(passwordInputBox, salesManagerPassword);
         clickButton(loginButton);
     }
-
-
-
-
-
-
-
 
 
 }

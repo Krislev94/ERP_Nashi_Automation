@@ -1,4 +1,39 @@
 package com.twiliaerp.pages;
 
-public class US07_MainPage {
+import com.twiliaerp.utilities.ConfigurationReader;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import java.util.Properties;
+
+public class US07_MainPage extends US07_PageBase {
+    @FindBy (css = "#login")
+    WebElement emailInputBox;
+
+    @FindBy (css = "#password")
+    WebElement passwordInputBox;
+
+    @FindBy (css = "[type='submit']")
+    WebElement loginButton;
+
+    public void loginAsPosManager(){
+        fillInInputBox(emailInputBox, ConfigurationReader.getProperty("pos.manager.email"));
+        fillInInputBox(passwordInputBox, ConfigurationReader.getProperty("pos.manager.password"));
+        clickButton(loginButton);
+    }
+
+    public void loginAsSalesManager(){
+        fillInInputBox(emailInputBox, ConfigurationReader.getProperty("sales.manager.email"));
+        fillInInputBox(passwordInputBox, ConfigurationReader.getProperty("sales.manager.password"));
+        clickButton(loginButton);
+    }
+
+
+
+
+
+
+
+
+
 }

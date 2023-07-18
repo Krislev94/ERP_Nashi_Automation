@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
+
 public class US12_StepDefs_DD {
 
 
@@ -22,16 +23,15 @@ public class US12_StepDefs_DD {
     }
 
 
-
     @When("User clicks Repairs button")
     public void user_clicks_repairs_button() {
-        BrowserUtils.sleep(2);
+        BrowserUtils.waitForVisibility(repairModulePageDd.repairsButton, 3);
         repairModulePageDd.repairsButton.click();
     }
 
     @When("User clicks Repair Reference checkbox")
     public void user_clicks_repair_reference_checkbox() {
-        BrowserUtils.sleep(3);
+        BrowserUtils.waitForVisibility(repairModulePageDd.repairReferenceButton, 3);
         repairModulePageDd.repairReferenceButton.click();
 
 
@@ -40,7 +40,7 @@ public class US12_StepDefs_DD {
 
     @Then("User selects all repair orders")
     public void user_selects_all_repair_orders() {
-        BrowserUtils.sleep(2);
+        BrowserUtils.waitForVisibility(repairModulePageDd.repairsButton, 3);
         for (WebElement each : repairModulePageDd.allRepairs){
            Assert.assertTrue(each.isSelected());
         }

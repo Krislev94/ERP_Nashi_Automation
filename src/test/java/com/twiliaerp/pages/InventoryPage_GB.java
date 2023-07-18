@@ -23,13 +23,22 @@ public class InventoryPage_GB {
     @FindBy(xpath = "//input[@placeholder='Product Name']")
     public WebElement productNameInput;
 
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_save']")
+    public WebElement saveButton;
 
+    @FindBy(xpath = "//p[text()='Product Template created']")
+    public WebElement createdProductConfirmation;
 
+    @FindBy(xpath = "//div[@class='oe_kanban_details']")
+    public WebElement findAnyProduct;
 
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_edit']")
+    public WebElement editButton;
 
-
-
-
+    @FindBy(xpath = "//strong[@class='o_kanban_record_title' and span/text()='Golden Doodle']")
+    public WebElement savedElementOnList;
 }
 
 //"//span[normalize-space()='Products' and contains(@class, 'oe_menu_text')]"
+
+//"//strong[@class='o_kanban_record_title' and span/text()='Golden Doodle']"

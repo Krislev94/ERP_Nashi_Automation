@@ -1,4 +1,4 @@
-@wip
+
 Feature: User repairs module
 
   Scenario Outline: Verify users can select all the repair orders by clicking the top checkbox

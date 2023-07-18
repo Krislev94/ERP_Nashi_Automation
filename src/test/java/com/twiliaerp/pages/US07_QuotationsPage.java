@@ -26,7 +26,7 @@ public class US07_QuotationsPage extends US07_PageBase {
     @FindBy(xpath = "//*[@class='o_searchview_input']")
     public WebElement searchInputBox;
 
-    @FindBy(xpath = "//em[text()=\'Sales Order\']")
+    @FindBy(xpath = "//em[text()='Sales Order']")
     public WebElement salesOrderSearchBoxDropdownMenuItem;
 
     @FindBy(xpath = "(//tr[starts-with(@class,'o_data_row')]//td)[2]")

@@ -8,4 +8,6 @@ public interface Pages {
     US07_MainPage mainPage = new US07_MainPage();
     US07_DashboardPage discussPage = new US07_DashboardPage();
     US07_SalesPage salesPage = new US07_SalesPage();
+
+
 }

@@ -8,13 +8,13 @@ import java.util.Properties;
 
 public class US07_MainPage extends US07_PageBase {
     @FindBy (css = "#login")
-    WebElement emailInputBox;
+    public WebElement emailInputBox;
 
     @FindBy (css = "#password")
-    WebElement passwordInputBox;
+    public WebElement passwordInputBox;
 
     @FindBy (css = "[type='submit']")
-    WebElement loginButton;
+    public WebElement loginButton;
 
     public void loginAsPosManager(){
         fillInInputBox(emailInputBox, ConfigurationReader.getProperty("pos.manager.email"));

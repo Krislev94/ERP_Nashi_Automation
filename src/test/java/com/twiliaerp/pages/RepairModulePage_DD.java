@@ -14,11 +14,11 @@ public class RepairModulePage_DD {
     }
 
 
-    @FindBy(xpath = "(//li[@class='active'])[1]/a/span")
+    @FindBy(xpath = "//a[@data-menu='535']")
     public WebElement repairsButton;
 
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    @FindBy(xpath = "//th[@width='1']//input")
     public WebElement repairReferenceButton;
 
 

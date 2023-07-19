@@ -19,34 +19,27 @@ public class US13_StepDefs_BV {
     LoginPage loginPage = new LoginPage();
     MainModulesPage_BV mainModulesPage_bv = new MainModulesPage_BV();
 
-    @Given("the user logged in with valid {string} and {string} for POS manager")
-    public void the_user_logged_in_with_valid_and_for_pos_manager(String email, String password) {
+    @Given("User logged in with valid {string} and {string} for POS manager")
+    public void UserLoggedInWithValidAndForPOSManager(String email, String password) {
         loginPage.login(email, password);
+    }
+
+    @Then("User sees Discuss page and account name starts with {string}")
+    public void userSeesDiscussPageAndAccountNameStartsWith(String username) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
+        Assert.assertEquals("active", mainModulesPage_bv.discussModule.getAttribute("class"));
+        Assert.assertTrue(mainModulesPage_bv.topBarName.getText().contains("POSManager"));
+
     }
 
     @Then("User should be able to access all {int} modules")
     public void userShouldBeAbleToAccessAllModules(int numberOfModules) {
-        System.out.println(mainModulesPage_bv.menuTabs.size());
 
-
-        //mainModulesPage_bv.menuTabs.forEach(webElement -> webElement.click());
-        for (WebElement menuTab : mainModulesPage_bv.menuTabs) {
-            //System.out.println(menuTab.getText());
-            menuTab.click();
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
-
-        }
-
-        for (WebElement moreTab : mainModulesPage_bv.moreTabs) {
-            mainModulesPage_bv.moreDropdown.click();
-            moreTab.click();
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
-        }
-        // WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        // wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
-        Assert.assertEquals(mainModulesPage_bv.menuTabs.size()+mainModulesPage_bv.moreTabs.size(), numberOfModules);
+        mainModulesPage_bv.verifyTabsAreClickable(numberOfModules);
 
     }
+
+
+
 }

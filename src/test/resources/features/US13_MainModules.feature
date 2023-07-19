@@ -6,11 +6,12 @@ Feature: POS Manager module access verification
 
 
   Scenario Outline: Verify the POS managers access to 22 modules
-    Given the user logged in with valid "<email>" and "<password>" for POS manager
-    Then User should be able to access all 22 modules
+    Given User logged in with valid "<email>" and "<password>" for POS manager
+    Then User sees Discuss page and account name starts with "POSManager"
+    And User should be able to access all 22 modules
 
     Examples:
       | email                 | password   |
       | posmanager7@info.com  | posmanager |
-     ## | posmanager20@info.com | posmanager |
+      | posmanager20@info.com | posmanager |
 

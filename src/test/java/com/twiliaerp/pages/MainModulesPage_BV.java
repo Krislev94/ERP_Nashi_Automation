@@ -15,7 +15,7 @@ public class MainModulesPage_BV extends BasePage {
     @FindBy(xpath = "//li[@id='menu_more_container']//span")
     public List<WebElement> moreTabs;
 
-    @FindBy(xpath = "(//*[@class='caret'])[1]")
+    @FindBy(xpath = "//li[@id='menu_more_container']")
     public WebElement moreDropdown;
 
 

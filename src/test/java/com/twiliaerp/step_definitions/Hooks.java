@@ -8,6 +8,7 @@ import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -50,13 +51,15 @@ public class Hooks {
 
 
         BrowserUtils.sleep(2);
-        Driver.closeDriver();
+         Driver.closeDriver();
 
     }
 
-    //@BeforeStep
+    @BeforeStep
     public void setupStep(){
-        System.out.println("-----> @BeforeSTEP : Running before each step!");
+       // System.out.println("-----> @BeforeSTEP : Running before each step!");
+        BrowserUtils.waitForPageToLoad(10);
+
     }
 
     //@AfterStep

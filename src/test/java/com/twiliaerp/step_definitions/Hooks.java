@@ -19,11 +19,11 @@ In this class we will be able to create "pre" and "post" condition
 for ALL the SCENARIOS and even STEPS.
  */
 public class Hooks {
-/*
-
     /*
-    @After will be executed automatically after EVERY scenario in the project.
-     */
+
+        /*
+        @After will be executed automatically after EVERY scenario in the project.
+         */
     @After
     public void teardownMethod(Scenario scenario){
 

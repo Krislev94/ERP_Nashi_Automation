@@ -13,7 +13,7 @@ Feature: Access the Odoo Documentation Page
     Examples:
       | username             | password   |
       | posmanager5@info.com | posmanager |
-      | posmanager6@info.com | posmager   |
+      | posmanager6@info.com | posmanager   |
 
   Scenario Outline: 4 main document topics should be listed.
     Given user is on the login page
@@ -27,4 +27,4 @@ Feature: Access the Odoo Documentation Page
 
       | username             | password   | option1   | option2              | option3   | option4      |
       | posmanager5@info.com | posmanager | User Docs | Install and Maintain | Developer | Contributing |
-      | posmanager6@info.com | posmager   | User Docs | Install and Maintain | Developer | Contributing |
+      | posmanager6@info.com | posmanager   | User Docs | Install and Maintain | Developer | Contributing |

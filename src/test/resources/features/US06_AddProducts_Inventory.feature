@@ -2,7 +2,7 @@ Feature: US06 As a PosManager, I should be able to add new products to inventory
 
   Background: User is already in the log in page
 
-  @inventoryGB
+  @B29G32-212
   Scenario: user can create a new product by filling only the Product Name input box.
   User clicks the save button, the information of the customer
   which the user entered should be displayed.
@@ -17,7 +17,7 @@ Feature: US06 As a PosManager, I should be able to add new products to inventory
     Then user finds the created element in the product list
 
 
-  @inventoryGB
+  @B29G32-212
   Scenario: when clicking any product and then clicking the edit button all the boxes entered
   information can be editable again.
     Given the user is already logged in

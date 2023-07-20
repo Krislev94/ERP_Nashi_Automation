@@ -14,6 +14,7 @@ public class DocumentationPage_BG {
     @FindBy(xpath = "//div[normalize-space()='User Docs']")
     public WebElement user_docs_verify;
 
+
     @FindBy(xpath = "//div[normalize-space()='Install and Maintain']")
     public WebElement install_and_maintain_verify;
 

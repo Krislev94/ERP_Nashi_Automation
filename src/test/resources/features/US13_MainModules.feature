@@ -1,3 +1,4 @@
+@behzod
 Feature: POS Manager module access verification
   US13: As a POS manager, I should be able to access the main modules.
 

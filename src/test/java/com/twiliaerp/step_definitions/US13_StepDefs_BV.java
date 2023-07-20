@@ -2,13 +2,12 @@ package com.twiliaerp.step_definitions;
 
 import com.twiliaerp.pages.LoginPage;
 import com.twiliaerp.pages.MainModulesPage_BV;
-
+import com.twiliaerp.utilities.ConfigurationReader;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -18,6 +17,12 @@ import java.time.Duration;
 public class US13_StepDefs_BV {
     LoginPage loginPage = new LoginPage();
     MainModulesPage_BV mainModulesPage_bv = new MainModulesPage_BV();
+
+    @Given("the user is on the login page")
+    public void the_user_is_on_the_login_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    }
+
 
     @Given("User logged in with valid {string} and {string} for POS manager")
     public void UserLoggedInWithValidAndForPOSManager(String email, String password) {

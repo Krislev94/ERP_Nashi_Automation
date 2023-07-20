@@ -45,13 +45,17 @@ public abstract class US07_PageBase {
         }
     }
 
-    public void navigateToMainSection(String sectionName) {
+    public void navigateToMainMenuSection(String sectionName) {
         if (this instanceof US07_MainPage) {
             throw new InvalidArgumentException("No menu item with the given name on the page titled " +
                     Driver.getDriver().getTitle() + ",\n URL: " +
                     Driver.getDriver().getCurrentUrl());
         } else {
-            String locator = "//*[@class='oe_menu_toggler']//*[normalize-space(text())='" + sectionName + "']";
+
+
+            String locator =
+                    "//*[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']//*[normalize-space(text())='"+
+                            sectionName +"']";
             try {
                 WebElement menuItem = Driver.getDriver().findElement(By.xpath(locator));
                 new Actions(Driver.getDriver()).moveToElement(menuItem).click().perform();

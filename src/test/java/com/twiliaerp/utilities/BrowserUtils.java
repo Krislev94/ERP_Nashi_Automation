@@ -57,7 +57,7 @@ public class BrowserUtils {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedInTitle));
     }
 
-    /*
+    /**
     This method accepts WebElement target,
     and waits for that WebElement not to be displayed on the page
      */
@@ -69,7 +69,7 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.invisibilityOf(target));
     }
 
-    /*
+    /**
     This method accepts String title,
     and waits for that Title to contain given String value.
      */

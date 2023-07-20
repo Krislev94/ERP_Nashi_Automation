@@ -23,9 +23,6 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    public WebElement accountName;
-
     public void click_menu_tab_option(String tabName){
         Driver.getDriver().findElement(By.xpath("//span[normalize-space(text())='" + tabName + "']")).click();
     }

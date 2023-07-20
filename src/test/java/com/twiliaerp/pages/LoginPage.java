@@ -12,7 +12,7 @@ public class LoginPage extends BasePage{
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//input[@id='login']")
+    @FindBy(id="login")
     public WebElement emailInput;
 
     @FindBy(xpath="//input[@type='password']")

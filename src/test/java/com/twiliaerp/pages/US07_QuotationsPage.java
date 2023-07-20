@@ -37,7 +37,7 @@ public class US07_QuotationsPage extends US07_PageBase {
 
     public void loadPage() {
         BrowserUtils.waitForInvisibilityOf(loadingBadge);
-        navigateToMainSection(SALES_TAB_NAME);
+        navigateToMainMenuSection(SALES_TAB_NAME);
         Wait<WebDriver> wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.titleIs("Quotations - Odoo"));
     }

@@ -1,6 +1,5 @@
 package com.twiliaerp.step_definitions;
 
-import com.twiliaerp.pages.US07_MainPage;
 import com.twiliaerp.pages.US07_QuotationsPage;
 import com.twiliaerp.utilities.BrowserUtils;
 import com.twiliaerp.utilities.Driver;

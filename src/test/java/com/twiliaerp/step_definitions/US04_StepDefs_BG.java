@@ -2,7 +2,7 @@ package com.twiliaerp.step_definitions;
 
 import com.twiliaerp.pages.CalendarPage_BG;
 import com.twiliaerp.pages.LoginPage;
-import com.twiliaerp.utilities.ConfigurationReader;
+
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -52,12 +52,7 @@ public class US04_StepDefs_BG {
         Driver.getDriver().findElement(By.xpath("//div[normalize-space()='" + eventDesc +"']")).click();
     }
 
-    /**
-    @When("user is on the login page")
-    public void userIsOnTheLoginPage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
-    */
+
 }
 
 

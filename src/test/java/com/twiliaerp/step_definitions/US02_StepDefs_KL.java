@@ -11,14 +11,11 @@ import org.openqa.selenium.Keys;
 public class US02_StepDefs_KL {
 
  LoginPage loginPage = new LoginPage();
-    @Given("user is on the login page")
-    public void the_user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
+
 
 
     @Given("user enters email {string}")
-    public void user_enters_email(String email) {
+    public void user_enters_emails(String email) {
         loginPage.emailInput.sendKeys(email);
     }
     @Then("user enters password {string}")

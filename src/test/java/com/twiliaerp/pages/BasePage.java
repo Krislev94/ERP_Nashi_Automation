@@ -24,7 +24,7 @@ public abstract class BasePage {
     }
 
     public void click_menu_tab_option(String tabName){
-        Driver.getDriver().findElement(By.xpath("//span[normalize-space()='" + tabName + "']")).click();
+        Driver.getDriver().findElement(By.xpath("//span[normalize-space(text())='" + tabName + "']")).click();
     }
 
 

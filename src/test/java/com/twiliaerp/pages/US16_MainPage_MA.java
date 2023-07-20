@@ -40,13 +40,11 @@ public class US16_MainPage_MA extends  BasePage{
                     e.printStackTrace();
                 }
 
-
                 Driver.getDriver().navigate().back();
                 BrowserUtils.waitForInvisibilityOf(loadingbar);
 
                 count--;
             }
-//            logOutButton.click();
 
         }
 

@@ -40,9 +40,7 @@ public class MainModulesPage_BV extends BasePage {
             menuTab.click();
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
             wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
-            Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
             Assert.assertEquals("active", menuTab.getAttribute("class"));
-            Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
 
         for (WebElement moreTab : moreTabs) {

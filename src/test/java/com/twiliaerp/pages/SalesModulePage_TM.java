@@ -21,12 +21,27 @@ public class SalesModulePage_TM {
     public WebElement CreateButton;
 
     @FindBy(xpath = "//input[@name='name']")
-    public WebElement NameField;
+    public WebElement EditableNameField;
 
     @FindBy(xpath = "//button[@accesskey='s']")
     public WebElement SaveButton;
 
     @FindBy(xpath = "//span[@name='name']")
     public WebElement NameOnCreatedCustomerForm;
+
+    @FindBy(xpath = "//div[@modifiers='{}']")
+    public WebElement CustomerProfileTag;
+
+    @FindBy(xpath = "//button[@accesskey='a']")
+    public WebElement EditButton;
+
+    @FindBy(xpath = "//input[@class='o_searchview_input']")
+    public WebElement SearchInputBox;
+
+    @FindBy(xpath = "(//strong[@class='o_kanban_record_title oe_partner_heading']/span)[1]")
+    public WebElement CustomerProfileNameInGeneralDirectory;
+
+
+
 
 }

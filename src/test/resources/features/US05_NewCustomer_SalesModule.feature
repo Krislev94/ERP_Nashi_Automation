@@ -14,6 +14,7 @@ Feature: US05 As a Sales Manager, I should be able to create a new customer from
     And User only fills out "<Name>" field
     And User clicks Save button
     Then User sees new customer profile created with same "<Name>"
+    And User is able to see new profile "<Name>" in directory
 
     Examples:
       | Name            |
@@ -24,3 +25,11 @@ Feature: US05 As a Sales Manager, I should be able to create a new customer from
   @WIP_TIM
   Scenario: When clicking any customer and then clicking the edit button all the boxes entered information
   can be editable again.
+
+    When User clicks Sales button
+    And User clicks Customers tab
+    And User clicks any customer profile
+    And User clicks Edit button
+    And User enters different name
+    And User clicks Save button
+    Then User sees new name displayed for that customer

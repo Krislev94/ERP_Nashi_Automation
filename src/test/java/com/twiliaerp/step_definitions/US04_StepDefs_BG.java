@@ -52,10 +52,12 @@ public class US04_StepDefs_BG {
         Driver.getDriver().findElement(By.xpath("//div[normalize-space()='" + eventDesc +"']")).click();
     }
 
+    /**
     @When("user is on the login page")
     public void userIsOnTheLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+    */
 }
 
 

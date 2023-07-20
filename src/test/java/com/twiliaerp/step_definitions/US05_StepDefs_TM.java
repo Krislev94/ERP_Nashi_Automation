@@ -4,6 +4,8 @@ import com.twiliaerp.pages.BasePage;
 import com.twiliaerp.pages.LoginPage;
 import com.twiliaerp.pages.SalesModulePage_TM;
 import com.twiliaerp.utilities.BrowserUtils;
+import com.twiliaerp.utilities.ConfigurationReader;
+import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -25,6 +27,7 @@ public class US05_StepDefs_TM extends BasePage {
 
     @Given("user is on the main page logged in as Sales Manager")
     public void user_is_on_the_main_page_logged_in_as_sales_manager() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.login("salesmanager100@info.com", "salesmanager");
 
 

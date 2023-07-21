@@ -44,9 +44,6 @@ public class US99_CalendarPage_DS extends US07_PageBase_DS {
     @FindBy(xpath = "//button[*='Ok']")
     public WebElement okButton;
 
-    @FindBy(xpath = "//div[@class='fc-content']")
-    public WebElement eventContainers;
-
     @FindBy(xpath = "//h4[@class='modal-title']")
     public WebElement eventHeader;
 

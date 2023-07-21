@@ -1,6 +1,6 @@
 package com.twiliaerp.step_definitions;
 
-import com.twiliaerp.pages.US07_MainPage;
+import com.twiliaerp.pages.US07_MainPage_DS;
 import com.twiliaerp.utilities.BrowserUtils;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -8,10 +8,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US99_StepDefs_DS extends US07_Pages_DS {
+public class US99_StepDefs_DS extends US07_BaseStep_DS {
     @Given("A user is on the main page")
     public void a_pos_manager_is_on_the_main_page() {
-        Assert.assertEquals(US07_MainPage.URL, Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals(US07_MainPage_DS.URL, Driver.getDriver().getCurrentUrl());
     }
 
     @When("The user enters valid email {string} and password {string}")

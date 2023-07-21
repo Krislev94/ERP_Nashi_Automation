@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class US07_QuotationsPage extends US07_PageBase {
+public class US07_QuotationsPage_DS extends US07_PageBase_DS {
 
     @FindBy(xpath = "//*[text()='Loading']")
     public WebElement loadingBadge;

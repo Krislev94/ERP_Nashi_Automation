@@ -6,11 +6,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-public abstract class US07_PageBase {
+public abstract class US07_PageBase_DS {
 
     public static final String SALES_TAB_NAME = "Sales";
 
-    public US07_PageBase() {
+    public US07_PageBase_DS() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -46,7 +46,7 @@ public abstract class US07_PageBase {
     }
 
     public void navigateToMainMenuSection(String sectionName) {
-        if (this instanceof US07_MainPage) {
+        if (this instanceof US07_MainPage_DS) {
             throw new InvalidArgumentException("No menu item with the given name on the page titled " +
                     Driver.getDriver().getTitle() + ",\n URL: " +
                     Driver.getDriver().getCurrentUrl());

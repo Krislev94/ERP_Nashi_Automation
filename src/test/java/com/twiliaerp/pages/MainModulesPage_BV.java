@@ -1,5 +1,6 @@
 package com.twiliaerp.pages;
 
+import com.twiliaerp.utilities.BrowserUtils;
 import com.twiliaerp.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -19,6 +20,9 @@ public class MainModulesPage_BV extends BasePage {
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement topBarName;
 
+    @FindBy(xpath = "//*[text()='Loading']")
+    public WebElement loadingBar;
+
     //List of WebElements outside the dropdown
     @FindBy(xpath = "//li[@id='menu_more_container']/preceding-sibling::li")
     public List<WebElement> menuTabs;
@@ -37,19 +41,19 @@ public class MainModulesPage_BV extends BasePage {
 
         for (WebElement menuTab : menuTabs) {
             //System.out.println(menuTab.getText());
+            BrowserUtils.waitForInvisibilityOf(loadingBar);
             menuTab.click();
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
-            Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+            wait.until(ExpectedConditions.invisibilityOf(loadingBar));
             Assert.assertEquals("active", menuTab.getAttribute("class"));
-            Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            //Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         }
 
         for (WebElement moreTab : moreTabs) {
             moreDropdown.click();
             moreTab.click();
             WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[text()='Loading']")));
+            wait.until(ExpectedConditions.invisibilityOf(loadingBar));
             Assert.assertEquals("active", moreTab.getAttribute("class"));
         }
 

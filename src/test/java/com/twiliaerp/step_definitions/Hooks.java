@@ -39,10 +39,15 @@ public class Hooks {
 
     }
 
+    @Before
+    public void setupMethod(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    }
+
+
     @BeforeStep
     public void setupStep(){
        // System.out.println("-----> @BeforeSTEP : Running before each step!");
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         BrowserUtils.waitForPageToLoad(10);
 
     }
@@ -50,6 +55,7 @@ public class Hooks {
     //@AfterStep
     public void teardownStep(){
         System.out.println("-----> @AfterSTEP : Running after each step!");
+        Driver.closeDriver();
     }
 
 

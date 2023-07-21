@@ -13,7 +13,6 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import java.time.Duration;
 
 /*
 In this class we will be able to create "pre" and "post" condition

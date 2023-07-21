@@ -27,7 +27,7 @@ Feature: Default
 	Scenario: US01-AC03-TC06 Verify user gets the "Please fill in this field." message for at least one blank field. 
 		Given user is on the login page
 		And user leaves email and password inputs empty and clicks login
-		Then user sees at least one "Please fill in this field" message	
+		Then user sees at least one "Please fill out this field." message
 
 	#{color:#FF0000}_*US:*_{color}
 	#
@@ -105,7 +105,7 @@ Feature: Default
 		Given user is on the login page
 		And user leaves email input empty
 		And user enters password "posmanager" and clicks login
-		Then user sees at least one "Please fill in this field" message	
+		Then user sees at least one "Please fill out this field." message
 
 	#{color:#de350b}_*US:*_{color}
 	#

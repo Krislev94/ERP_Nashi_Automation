@@ -1,6 +1,6 @@
 package com.twiliaerp.step_definitions;
 
-import com.twiliaerp.pages.US07_QuotationsPage;
+import com.twiliaerp.pages.US07_QuotationsPage_DS;
 import com.twiliaerp.utilities.BrowserUtils;
 import com.twiliaerp.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US07_StepDefs_DS extends US07_Pages_DS {
+public class US07_StepDefs_DS extends US07_BaseStep_DS {
     @Given("A POS manager is logged in")
     public void a_pos_manager_is_logged_in() {
         getMainPage().loginAsPosManager();
@@ -17,7 +17,7 @@ public class US07_StepDefs_DS extends US07_Pages_DS {
     @Given("The user is on the Quotations Page")
     public void the_user_is_on_the_quotations_page() {
         getQuotationPage().loadPage();
-        Assert.assertEquals(US07_QuotationsPage.EXPECTED_TITLE, Driver.getDriver().getTitle());
+        Assert.assertEquals(US07_QuotationsPage_DS.EXPECTED_TITLE, Driver.getDriver().getTitle());
 
     }
 

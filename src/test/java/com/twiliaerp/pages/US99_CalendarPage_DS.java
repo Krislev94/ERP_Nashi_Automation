@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class US99_CalendarPage extends US07_PageBase {
+public class US99_CalendarPage_DS extends US07_PageBase_DS {
 
 
     @FindBy(xpath = "//*[text()='Loading']")
@@ -43,9 +43,6 @@ public class US99_CalendarPage extends US07_PageBase {
 
     @FindBy(xpath = "//button[*='Ok']")
     public WebElement okButton;
-
-    @FindBy(xpath = "//div[@class='fc-content']")
-    public WebElement eventContainers;
 
     @FindBy(xpath = "//h4[@class='modal-title']")
     public WebElement eventHeader;

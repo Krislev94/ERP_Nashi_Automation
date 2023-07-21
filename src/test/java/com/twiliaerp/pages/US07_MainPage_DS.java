@@ -4,7 +4,7 @@ import com.twiliaerp.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class US07_MainPage extends US07_PageBase {
+public class US07_MainPage_DS extends US07_PageBase_DS {
 
 
     @FindBy(css = "#login")

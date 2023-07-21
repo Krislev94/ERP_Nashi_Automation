@@ -15,6 +15,9 @@ public class LoginPage extends BasePage{
     @FindBy(id="login")
     public WebElement emailInput;
 
+    @FindBy(xpath = "//*[text()='Loading']")
+    public WebElement loadingBadge;
+
     @FindBy(xpath="//input[@type='password']")
     public WebElement passwordInput;
 

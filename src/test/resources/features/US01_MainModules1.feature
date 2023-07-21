@@ -1,4 +1,4 @@
-@B29G32-275
+@wip
 Feature: Default
 
 	#*{color:#de350b}_US:_{color}*
@@ -8,7 +8,7 @@ Feature: Default
 	#{color:#de350b}*_AC:_*{color}
 	#
 	#2. Verify the "Wrong login/password" error message should be displayed after entering invalid password.
-	@B29G32-271
+
 	Scenario: US01-AC02-TC04 Verify the error message is displayed after entering invalid password..
 		Given user is on the login page
 		And user enters email "posmanager55@info.com "
@@ -27,7 +27,7 @@ Feature: Default
 	Scenario: US01-AC03-TC06 Verify user gets the "Please fill in this field." message for at least one blank field. 
 		Given user is on the login page
 		And user leaves email and password inputs empty and clicks login
-		Then user sees at least one "Please fill in this field" message	
+		Then user sees at least one "Please fill out this field." message
 
 	#{color:#FF0000}_*US:*_{color}
 	#
@@ -62,18 +62,19 @@ Feature: Default
 		Then user enters password "<password>"
 		And user clicks login button
 		Then user sees account name as "<name>"
-		
+
 		Examples:
 		| email                 | password   | name         |
-		| posmanager55@info.com | posmanager | pasmanager55 |
-		| posmanager67@info.com | posmanager | pasmanager67 |
-		| posmanager89@info.com | posmanager | posmanager89 |
+		| posmanager55@info.com | posmanager | POSManager55 |
+		| posmanager67@info.com | posmanager | POSManager67 |
+		| posmanager89@info.com | posmanager | POSManager89 |
 		
 		Examples:
 		| email                      | password        | name              |
-		| eventcrmmanager66@info.com | eventcrmmanager | eventcrmmanager66 |
-		| eventcrmmanager69@info.com | eventcrmmanager | eventcrmmanager69 |
-		| eventcrmmanager71@info.com | eventcrmmanager | eventcrmmanager71 |	
+		| eventscrmmanager66@info.com | eventscrmmanager | EventsCRMManager66 |
+		| eventscrmmanager69@info.com | eventscrmmanager | EventsCRMManager69 |
+		| eventscrmmanager71@info.com | eventscrmmanager | EventsCRMManager71 |
+
 
 	#*_US:_*
 	#
@@ -104,7 +105,7 @@ Feature: Default
 		Given user is on the login page
 		And user leaves email input empty
 		And user enters password "posmanager" and clicks login
-		Then user sees at least one "Please fill in this field" message	
+		Then user sees at least one "Please fill out this field." message
 
 	#{color:#de350b}_*US:*_{color}
 	#
@@ -123,12 +124,12 @@ Feature: Default
 		
 		Examples:
 		| email                 | password   | name         |
-		| posmanager55@info.com | posmanager | pasmanager55 |
-		| posmanager67@info.com | posmanager | pasmanager67 |
-		| posmanager89@info.com | posmanager | posmanager89 |
+		| posmanager55@info.com | posmanager | POSManager55 |
+		| posmanager67@info.com | posmanager | POSManager67 |
+		| posmanager89@info.com | posmanager | POSManager89 |
 		
 		Examples:
 		| email                      | password        | name              |
-		| eventcrmmanager66@info.com | eventcrmmanager | eventcrmmanager66 |
-		| eventcrmmanager69@info.com | eventcrmmanager | eventcrmmanager69 |
-		| eventcrmmanager71@info.com | eventcrmmanager | eventcrmmanager71 |
+		| eventscrmmanager66@info.com | eventscrmmanager | EventsCRMManager66 |
+		| eventscrmmanager69@info.com | eventscrmmanager | EventsCRMManager69 |
+		| eventscrmmanager71@info.com | eventscrmmanager | EventsCRMManager71 |

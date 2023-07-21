@@ -1,8 +1,7 @@
 package com.twiliaerp.step_definitions;
 
 import com.twiliaerp.pages.LoginPage;
-import com.twiliaerp.utilities.ConfigurationReader;
-import com.twiliaerp.utilities.Driver;
+import com.twiliaerp.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -28,7 +27,8 @@ public class US02_StepDefs_KL {
     }
     @Then("user sees account name as {string}")
     public void user_sees_account_name_as(String expectedAccountName) {
-        Assert.assertEquals(expectedAccountName, loginPage.accountName.getText());
+       BrowserUtils.waitForInvisibilityOf(loginPage.loadingBadge);
+       Assert.assertEquals(expectedAccountName, loginPage.accountName.getText());
     }
 
 

@@ -30,8 +30,8 @@ public class US01_StepDefs_YN {
 
     //@B29G32-274
     @Given("user leaves email input empty")
-    public void user_leaves_email_input_empty(String password) {
-loginPage.passwordInput.sendKeys(password);
+    public void user_leaves_email_input_empty() {
+loginPage.passwordInput.sendKeys("");
     }
 
     @Given("user enters password {string} and clicks login")
